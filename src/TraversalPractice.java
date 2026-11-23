@@ -152,9 +152,17 @@ public class TraversalPractice {
      * @param node the root of the tree
      * @return the count of branch nodes in the tree
      */
-    public static int branchCount(TreeNode node) {
-        return -1;
+   public static int branchCount(TreeNode node) {
+    if (node == null) {
+        return 0;
     }
+
+    if (node.left == null && node.right == null) {
+        return 0;
+    }
+
+    return 1 + branchCount(node.left) + branchCount(node.right);
+}
 
 
     /**
