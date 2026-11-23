@@ -1,15 +1,12 @@
 public class TraversalPractice {
-    /**
-     * Prints only the values of nodes of a tree that are strictly larger than
-     * 1000, traversing post-order.
-     * 
-     * Each value is printed on a separate line. Values less than or equal to
-     * 1000 are not printed.
-     * 
-     * If the node is null, nothing is printed.
-     * 
-     * @param node the root of the tree
-     */
+    if (node != null) {
+    printLargeNodesPostOrder(node.left);
+    printLargeNodesPostOrder(node.right);
+
+    if (node.data > 1000) {
+        System.out.println(node.data);
+    }
+}
     public static void printLargeNodesPostOrder(TreeNode node) {
 
     }
