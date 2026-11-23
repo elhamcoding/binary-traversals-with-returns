@@ -53,8 +53,15 @@ public class TraversalPractice {
      * @param node the root of the tree
      */
     public static void printOddNodesPreOrder(TreeNode node) {
+    if (node != null) {
+        if (node.data % 2 != 0) {
+            System.out.println(node.data);
+        }
 
+        printOddNodesPreOrder(node.left);
+        printOddNodesPreOrder(node.right);
     }
+}
     
     /**
      * Returns the sum of the leaf nodes in a tree.
